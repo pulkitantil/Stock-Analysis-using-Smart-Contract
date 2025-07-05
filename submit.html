@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submit Stock Analysis</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script defer src="app.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #d1d8e0, #f1f2f6, #a5b4fc, #c4b5fd);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      color: #1e3a8a;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1e3a8a;
+      text-decoration: underline;
+    }
+
+    .container {
+      margin: auto;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.85);
+      color: #1e293b;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: linear-gradient(to right, #6366f1, #8b5cf6);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      transform: translateY(-2px);
+    }
+
+    .link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+      color: #1e3a8a;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📊 StockDApp</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="analysis.html">View Analyses</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>✍️ Submit Your Stock Analysis</h2>
+    <input type="text" id="stockName" placeholder="Stock symbol (e.g. AAPL)" />
+    <textarea id="analysis" placeholder="Write your analysis..."></textarea>
+    <button onclick="submitAnalysis()">📤 Submit</button>
+    <br />
+    <a href="analysis.html" class="link">🔍 View All Analyses</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock Analyses</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script defer src="app.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #dbeafe);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #d1d5db;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #1e3a8a;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .report-list {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 1rem;
+    }
+
+    .report-card {
+      background: #f8fafc;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .report-card h3 {
+      color: #334155;
+      margin-bottom: 0.5rem;
+    }
+
+    .report-card p {
+      color: #475569;
+    }
+
+    .link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      text-decoration: none;
+      background: #3b82f6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .link:hover {
+      background: #2563eb;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📈 StockDApp</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="submit.html">Submit</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>📊 All Submitted Analyses</h2>
+    <div id="reports" class="report-list">
+      <!-- Sample static content until dynamic JS loads -->
+      <div class="report-card">
+        <h3>🔍 AAPL - Apple Inc.</h3>
+        <p>Strong Q1 earnings, excellent product pipeline. Long-term hold recommended.</p>
+      </div>
+      <div class="report-card">
+        <h3>📉 TSLA - Tesla</h3>
+        <p>Volatility expected due to global supply chain issues. Short-term caution advised.</p>
+      </div>
+    </div>
+    <a href="submit.html" class="link">➕ Submit New Analysis</a>
+  </div>
+
+</body>
+</html>

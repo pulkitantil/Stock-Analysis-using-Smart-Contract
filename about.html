@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | StockDApp</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #eef2ff, #ffffff);
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      padding: 1.5rem 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #dbeafe;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #475569;
+    }
+
+    .team {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .member {
+      flex: 1 1 250px;
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      border: 2px solid #3b82f6;
+    }
+
+    .member h4 {
+      margin: 0.5rem 0 0.25rem;
+      color: #1e40af;
+    }
+
+    .member p {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    footer {
+      margin-top: 4rem;
+      background-color: #f1f5f9;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    footer a {
+      color: #475569;
+      margin: 0 0.75rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    @media (max-width: 768px) {
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📈 StockVision</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="submit.html">Submit</a>
+      <a href="about.html">About Us</a>
+     
+    </nav>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Our Mission</h2>
+      <p>StockDApp is built to bring transparency and accessibility to stock market insights. We empower analysts and everyday investors to share reliable, decentralized financial research using blockchain technology.</p>
+    </section>
+
+    <section>
+      <h2>What We Do</h2>
+      <p>We provide a decentralized platform where users can submit, browse, and verify stock analyses. All submissions are stored securely on the blockchain, making them tamper-proof and publicly auditable.</p>
+    </section>
+
+    <section>
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <div class="member">
+          <img src="https://media.istockphoto.com/id/1391718981/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-in-an-office.jpg?s=612x612&w=0&k=20&c=eF_0QCtw-Y8Q2c4_xQe6KTkcSPiGCT6qBf6nuavE2Dg=" alt="Alice">
+          <h4>Alice Kapoor</h4>
+          <p>Blockchain Developer</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/3f/e9/fe/3fe9fe7f0573b76d84f1bc313e43c98d.jpg" alt="Bob">
+          <h4>Bob Mehta</h4>
+          <p>Frontend Engineer</p>
+        </div>
+        <div class="member">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/038/962/461/small/ai-generated-caucasian-successful-confident-young-businesswoman-ceo-boss-bank-employee-worker-manager-with-arms-crossed-in-formal-wear-isolated-in-white-background-photo.jpg" alt="Cathy">
+          <h4>Cathy Roy</h4>
+          <p>Product Designer</p>
+        </div>
+        <div class="member">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkTg2ihYVEKAm3mLWl7GZ08C8FjkCejigmA&s" alt="Dev">
+          <h4>Dev Arora</h4>
+          <p>Data Analyst</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 StockDApp. All rights reserved.</p>
+    <div>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Stock Analysis DApp</title>
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #ffffff);
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      color: white;
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      color: #e0e7ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #fff;
+    }
+
+    .nav-link::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: white;
+      width: 0%;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Dashboard Main */
+    .main-content {
+      flex: 1;
+      padding-top: 3rem;
+    }
+
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .dashboard-header h2 {
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #475569;
+      margin-top: 0.5rem;
+    }
+
+    /* Report Cards */
+    .report-list {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .report-card {
+      background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+      border: 1px solid #cbd5e1;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .report-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .primary-btn {
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+
+    .primary-btn:hover {
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #f1f5f9;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: auto;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .footer-links {
+      margin-top: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #475569;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #1e40af;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .dashboard-header h2 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">📈 StockDApp</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="submit.html" class="nav-link">Submit</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content container">
+    <div class="dashboard-header">
+      <h2>📊 Welcome to Your Dashboard</h2>
+      <p class="subtitle">Manage and review all your stock analyses in one place.</p>
+    </div>
+
+    <!-- Summary Cards -->
+    <section class="report-list">
+      <div class="report-card">
+        <h3>Total Reports</h3>
+        <p><strong>42</strong></p>
+        <p>Submitted analyses</p>
+      </div>
+      <div class="report-card">
+        <h3>Reviewed</h3>
+        <p><strong>35</strong></p>
+        <p>Reports marked as reviewed</p>
+      </div>
+      <div class="report-card">
+        <h3>Pending Review</h3>
+        <p><strong>7</strong></p>
+        <p>Awaiting analyst feedback</p>
+      </div>
+    </section>
+
+    <!-- Recent Reports -->
+    <section style="margin-top: 3rem;">
+      <h3 style="margin-bottom: 1rem;">🕒 Recent Submissions</h3>
+      <div class="report-list">
+        <div class="report-card">
+          <h4>Apple Inc. (AAPL)</h4>
+          <p>Analysis submitted on Apr 10, 2025</p>
+        </

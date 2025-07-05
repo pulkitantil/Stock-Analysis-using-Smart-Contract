@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockVision | Decentralized Stock Analysis</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Web3 -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <!-- JS -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="logo">📈 StockVision</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="submit.html" class="nav-link">Submit Analysis</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <section class="dashboard-header">
+      <h2>📊 Community Stock Analyses</h2>
+      <p class="subtitle">Explore decentralized insights and real-time crowd-sourced stock trends.</p>
+    </section>
+
+    <!-- Optional Search/Filter -->
+    <div class="actions">
+      <input type="text" id="searchBox" class="search-input" placeholder="🔍 Search by stock, analyst, or keyword..." />
+
+    </div>
+
+    <!-- Reports -->
+    <section id="reports" class="report-list">
+      <!-- JavaScript will render report cards here -->
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <a href="submit.html" class="btn primary-btn">➕ Submit New Analysis</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 StockVision. Built with Web3 & Ethereum Smart Contracts.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
